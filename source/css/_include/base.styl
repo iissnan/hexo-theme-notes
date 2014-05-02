@@ -1,0 +1,29 @@
+body
+    color $baseTextColor
+    background $bodyBackgroundColor
+    font $fontSizeBase/$fontLineHeightBase $fontFamilyBase
+
+h1, h2, h3, h4, h5, h6
+    margin 0
+    padding 0
+    font-weight bold
+    line-height 1
+
+for headline in (1..6)
+    h{headline}
+        font-size $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline
+
+a
+    color: $baseLinkColor
+    &:hover
+        text-decoration underline
+
+p
+    margin 10px 0;
+
+ul
+    list-style: none
+
+::selection
+    background $colorDeepBlue
+    color: white

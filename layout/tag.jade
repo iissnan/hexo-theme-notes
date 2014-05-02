@@ -1,0 +1,13 @@
+extends _layout.jade
+include _minxin/entry.jade
+
+block head
+    title= "Tag | " + config.title
+
+block content
+    -page.posts.each(function(post, index){
+        if index === page.posts.length - 1
+            -post.isLast = true
+        -post.pageType = "tag"
+        +renderPost(post, "tag")
+    -})

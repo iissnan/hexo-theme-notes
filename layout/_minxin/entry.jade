@@ -1,0 +1,32 @@
+mixin renderPost(post, pageType, last)
+
+    -var articleLink = config.root + post.path
+
+    div.post.post-entry
+        div.post-header
+            div.post-meta
+                span.post-time
+                    | 发布于
+                    = date(post.date, "YYYY-MM-DD")
+                if post.categories && post.categories.length
+                    | , 属于
+                    != list_categories(post.categories, {show_count: false})
+                    | 分类
+            h2.post-title
+                if post.pageType !== "post"
+                    a.post-title-link(href=articleLink)
+                        = post.title
+                else
+                    =post.title
+        div.post-body
+            if post.excerpt && pageType == "index"
+                != post.excerpt
+                div.post-more-link
+                    a(href=articleLink) Read more
+
+            else
+                != post.content
+
+        div.post-footer
+            if !post.isLast && post.pageType !== "post" && post.pageType !== "page"
+                div.post-eof

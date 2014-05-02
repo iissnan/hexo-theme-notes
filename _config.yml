@@ -1,0 +1,20 @@
+menu:
+  Home: /
+  Archives: /archives
+
+sidebar: false
+
+
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: MMM D YYYY
+time_format: H:mm:ss
+
+
+# Code Highlight theme
+## Available value: normal | night | night eighties | night blue | night bright
+## https://github.com/chriskempson/tomorrow-theme
+highlight_theme: night bright

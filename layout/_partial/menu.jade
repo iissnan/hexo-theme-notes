@@ -1,0 +1,5 @@
+if theme.menu
+    ul.menu#menu
+        each path, name in theme.menu
+            li.menu-item
+                != link_to(path, name)

@@ -1,0 +1,9 @@
+extends _layout.jade
+include _minxin/entry.jade
+
+block head
+    title= page.title + " | " + config.title
+
+block content
+    -page.pageType = "page"
+    +renderPost(page)

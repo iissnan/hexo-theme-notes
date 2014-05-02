@@ -1,0 +1,122 @@
+.container
+  .header
+    background $headerBackgroundColor
+    border-bottom solid $headerBorderBottomWidth $headerBorderBottomColor
+    height $headerHeight
+    .header-wrap
+      position relative
+    .brand
+      position absolute
+      width $brandWidth
+      height $brandHeight
+      background $colorBlue
+      border-radius 0 0 2px 2px
+      a
+        display block
+        text-align center
+        height 100%
+        .logo
+          display block
+          height 100%
+          &::before, &::after
+            position relative
+            top (($brandHeight - 30)/2)px
+            content ' '
+            display inline-block
+            width 0
+            height 0
+            border-width 15px
+            border-style solid
+          &::before
+            border-color $colorBlue white $colorBlue $colorBlue
+          &::after
+            border-color $colorBlue $colorBlue $colorBlue white
+        .site-title
+          display none
+    .menu
+      float right
+      margin 0
+      padding 0
+      .menu-item
+        float left
+        a
+          display block
+          margin-right $menuItemRightMargin
+          line-height $menuItemLinkHeight
+          &.last
+            margin-right 0
+
+  .main
+    .content
+      background $contentBackgroundColor
+      .content-wrap
+        padding-bottom 30px
+        .post-entry
+          padding-top 40px
+
+          .post-title
+            margin-bottom 30px
+            font-size 26px
+            .post-title-link
+              text-decoration underline
+              color: #555
+          .post-meta
+            color #999
+            .post-category-list
+              display inline-block
+              margin 0
+              padding 3px
+            .post-category-list-link
+              color #999
+          .post-body
+            h2
+            h3
+            h4
+            h5
+            h6
+              margin 30px 0 15px
+          .post-eof
+            margin-top 30px
+            height 1px
+            background #eee
+            text-align center
+            &::before, &::after
+              position relative
+              top -6px
+              content ' '
+              display inline-block
+              width 0
+              height 0
+              border-width 8px
+              border-style solid
+            &::before
+              border-color #fff #eee #fff #fff
+            &::after
+              border-color #fff #fff #fff #eee
+
+      .paginator
+        overflow hidden
+        margin-top 20px
+        padding 20px
+        border-top 1px solid #ddd
+        a
+          display inline-block
+          background $baseLinkColor
+          color white
+          text-decoration none
+          padding 5px 20px
+          border-radius 2px
+          &:hover
+            background #2d2d2d
+          &.paginator-prev
+            float left
+          &.paginator-next
+            float right
+
+    .sidebar
+      background $contentBackgroundColor
+
+  .footer
+    .copyright
+      .author
+        text-transform uppercase
