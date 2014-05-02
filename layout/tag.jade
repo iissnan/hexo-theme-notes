@@ -11,3 +11,10 @@ block content
         -post.pageType = "tag"
         +renderPost(post, "tag")
     -})
+
+    if page.prev || page.next
+        div.paginator
+            if page.prev
+                a.paginator-prev(href=url_for(page.prev_link)) &laquo; Prev
+            if page.next
+                a.paginator-next(href=url_for(page.next_link)) Next &raquo;

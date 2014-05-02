@@ -20,12 +20,6 @@ html
                     div.content-wrap
                         block content
 
-                    if page.prev || page.next
-                        div.paginator
-                            if page.prev
-                                a.paginator-prev(href=url_for(page.prev_link)) &laquo; Prev
-                            if page.next
-                                a.paginator-next(href=url_for(page.next_link)) Next &raquo;
                 if theme.sidebar
                     include _partial/sidebar
 
