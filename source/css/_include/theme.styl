@@ -59,9 +59,9 @@
             font-size 26px
             .post-title-link
               text-decoration underline
-              color #555
+              color $colorLightBlack
           .post-meta
-            color #999
+            color $colorDarkGray
             position relative
             .post-type
               position absolute
@@ -83,13 +83,13 @@
                 color white
                 background $colorBlue
                 &:hover
-                  background #2d2d2d
+                  background $colorDeepBlue
             .post-category-list
               display inline-block
               margin 0
               padding 3px
             .post-category-list-link
-              color #999
+              color $colorDarkGray
           .post-body
             h2
             h3
@@ -100,7 +100,7 @@
           .post-eof
             margin-top 30px
             height 1px
-            background #eee
+            background $colorGainsboro
             text-align center
             &::before, &::after
               position relative
@@ -112,15 +112,15 @@
               border-width 8px
               border-style solid
             &::before
-              border-color #fff #eee #fff #fff
+              border-color white $colorGainsboro white white
             &::after
-              border-color #fff #fff #fff #eee
+              border-color white white white $colorGainsboro
 
       .paginator
         overflow hidden
         margin-top 20px
         padding 20px
-        border-top 1px solid #ddd
+        border-top 1px solid $colorLighterGray
         a
           display inline-block
           background $baseLinkColor
@@ -129,7 +129,7 @@
           padding 5px 20px
           border-radius 2px
           &:hover
-            background #2d2d2d
+            background $colorDeepBlue
           &.paginator-prev
             float left
           &.paginator-next
