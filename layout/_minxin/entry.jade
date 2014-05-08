@@ -5,6 +5,15 @@ mixin renderPost(post, pageType, last)
     div.post.post-entry
         div.post-header
             div.post-meta
+                if post.type
+                    div.post-type(class='post-type-' + post.type)
+                        if post.link_to
+                            a.post-type-link(href=post.link_to, target="_blank")
+                                = post.type
+                        else
+                            p.post-type-text= post.type
+
+
                 span.post-time
                     | 发布于
                     = date(post.date, "YYYY-MM-DD")
