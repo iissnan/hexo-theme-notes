@@ -22,7 +22,9 @@
       width $desktopSidebarWidth
 
   .footer
-    margin 20px auto
-    width $desktopMainWidth
-    .one-column &
-      width $desktopContentWidth
+    border-top 1px solid $colorLighterGray
+    .footer-wrap
+      margin 20px auto
+      width $desktopMainWidth - 40px
+      .one-column &
+        width $desktopContentWidth - 40px

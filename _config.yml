@@ -17,4 +17,4 @@ time_format: H:mm:ss
 # Code Highlight theme
 ## Available value: normal | night | night eighties | night blue | night bright
 ## https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright
+highlight_theme: night eighties
