@@ -6,7 +6,7 @@ mixin renderPost(post, pageType, last)
         div.post-header
             div.post-meta
                 span.post-time
-                    | 发布于
+                    | Posted on &nbsp;
                     = date(post.date, "YYYY-MM-DD")
                 if post.categories && post.categories.length
                     | , 属于

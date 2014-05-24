@@ -5,22 +5,23 @@
     height $headerHeight
     .header-wrap
       position relative
+      font-family $fontFamilySans
     .brand
-      position absolute
+      float left
       height $brandHeight
       background $colorBlue
-      border-radius 0 0 2px 2px
       a
         display block
         text-align center
         height 100%
         color white
         .logo
-          display block
+          display inline-block
+          vertical-align top
           height 100%
           &::before, &::after
             position relative
-            top (($brandHeight - 30)/2)px
+            top (($brandHeight - 30)/2) - 1px
             content ' '
             display inline-block
             width 0
@@ -32,7 +33,13 @@
           &::after
             border-color $colorBlue $colorBlue $colorBlue white
         .site-title
-          display none
+          display inline-block
+          vertical-align top
+          line-height $brandHeight
+          text-transform uppercase
+          font-size 20px
+          font-weight 300
+
     .menu
       float right
       margin 0
@@ -63,6 +70,7 @@
               text-decoration underline
               color $colorLightBlack
           .post-meta
+            font-family $fontFamilySans
             color $colorDarkGray
             position relative
             .post-category-list
@@ -129,6 +137,7 @@
       background $contentBackgroundColor
 
   .footer
+    font-family $fontFamilySans
     .footer-wrap
       overflow hidden
       .copyright
