@@ -1,12 +1,13 @@
 div.copyright
     != "&copy; " + date(Date.now(), "YYYY") + " "
+    | &hearts; &nbsp;
     span.author
         =config.author
 
 div.theme-info
-    | &nbsp;&nbsp; Theme:
+    | Theme - &nbsp;
     a.theme-link(href="https://github.com/iissnan/hexo-theme-notes")
-        |  Notes
+        | Notes
 
 if theme.google_analytics
     script.

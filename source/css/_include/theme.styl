@@ -52,6 +52,7 @@
           line-height $menuItemLinkHeight
           text-decoration none
           color white
+          text-transform capitalize
           &:hover
             background darken($menuItemLinkBackgroundColor, 50%)
 
@@ -72,7 +73,7 @@
           .post-meta
             font-family $fontFamilySans
             color $colorDarkGray
-            position relative
+            font-size 14px
             .post-category-list
               display inline-block
               margin 0
@@ -138,11 +139,9 @@
 
   .footer
     font-family $fontFamilySans
+    font-size 14px
     .footer-wrap
       overflow hidden
       .copyright
-        float left
         .author
           text-transform uppercase
-      .theme-info
-        float right
