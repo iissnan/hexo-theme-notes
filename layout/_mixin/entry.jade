@@ -23,7 +23,7 @@ mixin renderPost(post, pageType, last)
                 div.post-type(class='post-type-' + post.type)
                     if post.link_to
                         strong Link Post: &nbsp;
-                        | This is a link post. The following content may be a excerpt from the link.
+                        | The following content may be an excerpt from the link.
                         br
                         a(href=post.link_to, target="_blank") Visit the link Now &raquo;
 

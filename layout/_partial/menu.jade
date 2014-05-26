@@ -1,5 +1,6 @@
 if theme.menu
     ul.menu#menu
         each path, name in theme.menu
-            li.menu-item
+            - item_specific = "menu-item-" + name.toLowerCase()
+            li.menu-item(class=item_specific)
                 != link_to(path, name)

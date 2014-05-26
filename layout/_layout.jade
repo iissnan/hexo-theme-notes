@@ -1,5 +1,6 @@
 doctype
-html
+-var page_class = is_home() ? "page-home" : (is_archive() ? "page-archive" : "")
+html(class=page_class)
     head
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")

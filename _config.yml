@@ -1,6 +1,6 @@
 menu:
-  Home: /
-  Archives: /archives
+  home: /
+  archive: /archives
 
 sidebar: false
 
