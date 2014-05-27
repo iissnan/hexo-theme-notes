@@ -8,10 +8,6 @@ mixin renderPost(post, pageType, last)
                 span.post-time
                     | Posted on &nbsp;
                     = date(post.date, "YYYY-MM-DD")
-                if post.categories && post.categories.length
-                    | , 属于
-                    != list_categories(post.categories, {show_count: false})
-                    | 分类
             h2.post-title
                 if post.pageType !== "post"
                     a.post-title-link(href=articleLink)
@@ -37,5 +33,11 @@ mixin renderPost(post, pageType, last)
                 != post.content
 
         div.post-footer
+            if post.tags && post.tags.length
+                div.post-tags
+                    | tags: &nbsp;
+                    -post.tags.each(function(tag){
+                    a(href=url_for(tag.path))= tag.name
+                    -})
             if !post.isLast && post.pageType !== "post" && post.pageType !== "page"
                 div.post-eof
