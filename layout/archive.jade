@@ -1,5 +1,5 @@
 extends _layout.jade
-include _mixin/entry.jade
+include _mixin/entry_list.jade
 
 block head
     title= "Archive | " + config.title
@@ -9,7 +9,7 @@ block content
         if index === page.posts.length - 1
             -post.isLast = true
         -post.pageType = "archive"
-        +renderPost(post)
+        +renderPostList(post)
     -})
 
     if page.prev || page.next
