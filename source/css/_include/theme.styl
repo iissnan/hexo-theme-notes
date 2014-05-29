@@ -95,6 +95,11 @@
             ul
               list-style square
 
+            blockquote
+              margin 10px 20px
+              padding 0 15px
+              color $colorDimGray
+              border-left 2px solid $colorLightGray
             .post-type-link
               margin: 20px 0
               padding 15px
@@ -116,7 +121,7 @@
             text-align center
             &::before, &::after
               position relative
-              top -6px
+              top -11px
               content ' '
               display inline-block
               width 0
@@ -131,14 +136,14 @@
       .paginator
         overflow hidden
         margin-top 20px
-        padding 20px
+        padding 20px 0
         border-top 1px solid $colorLighterGray
         a
           display inline-block
           background $baseLinkColor
           color white
           text-decoration none
-          padding 5px 20px
+          padding 2px 20px
           border-radius 2px
           &:hover
             background $colorDeepBlue
