@@ -22,12 +22,13 @@ html(class=page_class)
                     block header
 
             div#main.main
-                div#content.content
-                    div.content-wrap
-                        block content
+                .main-wrap
+                    div#content.content
+                        div.content-wrap
+                            block content
 
-                if theme.sidebar
-                    include _partial/sidebar
+                    if theme.sidebar
+                        include _partial/sidebar
 
             div#footer.footer
                 .footer-wrap

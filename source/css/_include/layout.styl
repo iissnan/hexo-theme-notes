@@ -7,19 +7,21 @@
         width $desktopContentWidth
 
   .main
-    .one-column &
-      width $desktopContentWidth
-    margin 20px auto
-    width $desktopMainWidth
-    .content
-      width $desktopContentWidth
-      .content-wrap
-        margin 0 $contentWrapMarginHorizontal
+    .main-wrap
+      margin 0 auto
+      width $desktopMainWidth
+      .one-column &
+        width $desktopContentWidth
+      .content
+        overflow hidden
+        width $desktopContentWidth
+        .content-wrap
+          margin 0 $contentWrapMarginHorizontal
 
-    .sidebar
-      float right
-      margin-left 20px
-      width $desktopSidebarWidth
+      .sidebar
+        float right
+        margin-left 20px
+        width $desktopSidebarWidth
 
   .footer
     border-top 1px solid $colorLighterGray

@@ -1,4 +1,5 @@
 .container
+
   .header
     background $headerBackgroundColor
     border-bottom solid $headerBorderBottomWidth $headerBorderBottomColor
@@ -62,111 +63,114 @@
         background darken($menuItemLinkBackgroundColor, 50%)
 
   .main
-    .content
-      background $contentBackgroundColor
-      .content-wrap
-        padding-bottom 30px
-        .post-entry
-          padding-top 40px
+    if hexo-config('use_background')
+      background url(/images/gplaypattern.png) repeat
+    .main-wrap
+      .content
+        background $contentBackgroundColor
+        .content-wrap
+          padding-bottom 30px
+          .post-entry
+            padding-top 40px
 
-          .post-title
-            margin-bottom 30px
-            font-size 26px
-            .post-title-link
-              text-decoration underline
-              color $colorLightBlack
-          .post-meta
-            font-family $fontFamilySans
-            color $colorDarkGray
-            font-size 14px
-            .post-category-list
-              display inline-block
-              margin 0
-              padding 3px
-            .post-category-list-link
-              color $colorDarkGray
-          .post-body
-            h2
-            h3
-            h4
-            h5
-            h6
-              margin 30px 0 15px
-            ul
-              list-style square
-
-            blockquote
-              margin 10px 0
-              padding 0 15px
-              color $colorDimGray
-              border-left 2px solid $colorLightGray
-            code
-              font-size 13px
-            .post-type-link
-              margin: 20px 0
-              padding 15px
-              color $colorBlue
-              background #d9edf7
-              border 1px solid #bce8f1
-          .post-footer
-            .post-tags
-              margin-top 20px
+            .post-title
+              margin-bottom 30px
+              font-size 26px
+              .post-title-link
+                text-decoration underline
+                color $colorLightBlack
+            .post-meta
               font-family $fontFamilySans
-              text-align right
-              a
-                display: inline-block
-                margin-right 10px
-          .post-eof
-            margin 60px 0 20px
-            height 1px
-            background $colorLightGray
-            text-align center
-            &::before, &::after
-              position relative
-              top -11px
-              content ' '
-              display inline-block
-              width 0
-              height 0
-              border-width 8px
-              border-style solid
-            &::before
-              border-color white $colorLightGray white white
-            &::after
-              border-color white white white $colorLightGray
+              color $colorDarkGray
+              font-size 14px
+              .post-category-list
+                display inline-block
+                margin 0
+                padding 3px
+              .post-category-list-link
+                color $colorDarkGray
+            .post-body
+              h2
+              h3
+              h4
+              h5
+              h6
+                margin 30px 0 15px
+              ul
+                list-style square
+
+              blockquote
+                margin 10px 0
+                padding 0 15px
+                color $colorDimGray
+                border-left 2px solid $colorLightGray
+              code
+                font-size 13px
+              .post-type-link
+                margin: 20px 0
+                padding 15px
+                color $colorBlue
+                background #d9edf7
+                border 1px solid #bce8f1
+            .post-footer
+              .post-tags
+                margin-top 20px
+                font-family $fontFamilySans
+                text-align right
+                a
+                  display: inline-block
+                  margin-right 10px
+            .post-eof
+              margin 60px 0 20px
+              height 1px
+              background $colorLightGray
+              text-align center
+              &::before, &::after
+                position relative
+                top -11px
+                content ' '
+                display inline-block
+                width 0
+                height 0
+                border-width 8px
+                border-style solid
+              &::before
+                border-color white $colorLightGray white white
+              &::after
+                border-color white white white $colorLightGray
 
 
 
-    .page-archives & .content .content-wrap .post-entry
-        margin-left 20px
-        padding-top 0
-    .page-archives & .content .content-wrap .archives-date
-        margin 40px 0
-        color $colorDarkGray
+      .page-archives & .content .content-wrap .post-entry
+          margin-left 20px
+          padding-top 0
+      .page-archives & .content .content-wrap .archives-date
+          margin 40px 0
+          color $colorDarkGray
 
 
 
-      .paginator
-        overflow hidden
-        margin-top 20px
-        padding 20px 0
-        border-top 1px solid $colorLighterGray
-        a
-          display inline-block
-          background $baseLinkColor
-          color white
-          text-decoration none
-          padding 2px 20px
-          border-radius 2px
-          &:hover
-            background $colorDeepBlue
-          &.paginator-prev
-            float left
-          &.paginator-next
-            float right
+        .paginator
+          overflow hidden
+          margin-top 20px
+          padding 20px 0
+          border-top 1px solid $colorLighterGray
+          a
+            display inline-block
+            background $baseLinkColor
+            color white
+            text-decoration none
+            padding 2px 20px
+            border-radius 2px
+            &:hover
+              background $colorDeepBlue
+            &.paginator-prev
+              float left
+            &.paginator-next
+              float right
 
-    .sidebar
-      background $contentBackgroundColor
+      .sidebar
+        background $contentBackgroundColor
 
   .footer
     font-family $fontFamilySans
