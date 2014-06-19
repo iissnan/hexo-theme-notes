@@ -1,185 +1,210 @@
-.container
 
-  .header
-    background $headerBackgroundColor
-    border-bottom solid $headerBorderBottomWidth $headerBorderBottomColor
-    height $headerHeight
-    .header-wrap
-      position relative
-      font-family $fontFamilySans
-    .brand
+.header
+  background $headerBackgroundColor
+  border-bottom solid $headerBorderBottomWidth $headerBorderBottomColor
+  height $headerHeight
+  .header-wrap
+    position relative
+    font-family $fontFamilySans
+  .brand
+    float left
+    height $brandHeight
+    a
+      display block
+      text-align center
+      height 100%
+      color white
+      .logo
+        display inline-block
+        vertical-align top
+        height 100%
+        &::before, &::after
+          position relative
+          top (($brandHeight - 30)/2) - 1px
+          content ' '
+          display inline-block
+          width 0
+          height 0
+          border-width 15px
+          border-style solid
+        &::before
+          border-color transparent
+          border-right-color white
+        &::after
+          border-color transparent
+          border-left-color white
+      .site-title
+        display inline-block
+        vertical-align top
+        line-height $brandHeight
+        text-transform uppercase
+        font-size 20px
+        font-weight 300
+
+  .menu
+    float right
+    margin 0
+    padding 0
+    .menu-item
       float left
-      height $brandHeight
-      background $colorBlue
       a
         display block
-        text-align center
-        height 100%
+        padding 0 10px
+        line-height $menuItemLinkHeight
+        text-decoration none
         color white
-        .logo
-          display inline-block
-          vertical-align top
-          height 100%
-          &::before, &::after
-            position relative
-            top (($brandHeight - 30)/2) - 1px
-            content ' '
-            display inline-block
-            width 0
-            height 0
-            border-width 15px
-            border-style solid
-          &::before
-            border-color $colorBlue white $colorBlue $colorBlue
-          &::after
-            border-color $colorBlue $colorBlue $colorBlue white
-        .site-title
-          display inline-block
-          vertical-align top
-          line-height $brandHeight
-          text-transform uppercase
-          font-size 20px
-          font-weight 300
+        text-transform capitalize
+        &:hover
+          background $menuItemHoverBackgroundColor
 
-    .menu
-      float right
-      margin 0
-      padding 0
-      .menu-item
-        float left
-        a
-          display block
-          padding 0 10px
-          line-height $menuItemLinkHeight
-          text-decoration none
-          color white
-          text-transform capitalize
-          &:hover
-            background darken($menuItemLinkBackgroundColor, 50%)
-
-      .page-home & .menu-item-home a,
-      .page-archives & .menu-item-archives a,
-      .page-about & .menu-item-about a
-        background darken($menuItemLinkBackgroundColor, 50%)
-
-  .main
-    if hexo-config('use_background')
-      background url(/images/gplaypattern.png) repeat
-    .main-wrap
-      .content
-        background $contentBackgroundColor
-        .content-wrap
-          padding-bottom 30px
-          .post-entry
-            padding-top 40px
-
-            .post-title
-              margin-bottom 30px
-              font-size 26px
-              .post-title-link
-                text-decoration underline
-                color $colorLightBlack
-            .post-meta
-              font-family $fontFamilySans
-              color $colorDarkGray
-              font-size 14px
-              .post-category-list
-                display inline-block
-                margin 0
-                padding 3px
-              .post-category-list-link
-                color $colorDarkGray
-            .post-body
-              h2
-              h3
-              h4
-              h5
-              h6
-                margin 30px 0 15px
-              ul
-                list-style square
-
-              blockquote
-                margin 10px 0
-                padding 0 15px
-                color $colorDimGray
-                border-left 2px solid $colorLightGray
-              code
-                font-size 13px
-              .post-type-link
-                margin: 20px 0
-                padding 15px
-                color $colorBlue
-                background #d9edf7
-                border 1px solid #bce8f1
-            .post-footer
-              .post-tags
-                margin-top 20px
-                font-family $fontFamilySans
-                text-align right
-                a
-                  display: inline-block
-                  margin-right 10px
-            .post-eof
-              margin 60px 0 20px
-              height 1px
-              background $colorLightGray
-              text-align center
-              &::before, &::after
-                position relative
-                top -11px
-                content ' '
-                display inline-block
-                width 0
-                height 0
-                border-width 8px
-                border-style solid
-              &::before
-                border-color white $colorLightGray white white
-              &::after
-                border-color white white white $colorLightGray
+    .page-home & .menu-item-home a,
+    .page-archives & .menu-item-archives a,
+    .page-about & .menu-item-about a
+      background $menuItemHoverBackgroundColor
 
 
+.main
+  background url($mainBackgroundImage) repeat if hexo-config('use_background')
+  .main-wrap
+    .content
+      background $contentBackgroundColor
+      .content-wrap
+        padding-bottom 30px
+    .sidebar
+      background $contentBackgroundColor
 
-      .page-archives & .content .content-wrap .post-entry
-          margin-left 20px
-          padding-top 0
-      .page-archives & .content .content-wrap .archives-date
-          margin 40px 0
-          color $colorDarkGray
 
+.post-entry
+  font-family $fontFamilyPost
+  padding-top 40px
+  a
+    border-bottom 1px solid $baseLinkDecorationColor
+    &:hover
+      border-bottom-color $baseLinkHoverDecorationColor
 
-
-        .pagination
-          overflow hidden
-          margin-top 20px
-          padding 20px 0
-          border-top 1px solid $colorLighterGray
-          a
-            display inline-block
-            background $baseLinkColor
-            color white
-            text-decoration none
-            padding 2px 20px
-            border-radius 2px
-            &:hover
-              background $colorDeepBlue
-            &.pagination-prev
-              float left
-            &.pagination-next
-              float right
-
-      .sidebar
-        background $contentBackgroundColor
-
-  .footer
+  .post-title
+    margin-bottom 30px
+    font-size 26px
+    .post-title-link
+      color $colorLightBlack
+      border-bottom-color $colorLightBlack
+      line-height 1.2
+  .post-meta
     font-family $fontFamilySans
+    color $colorDarkGray
     font-size 14px
-    .footer-wrap
-      overflow hidden
-      .copyright
-        .author
-          text-transform uppercase
+    .post-category-list
+      display inline-block
+      margin 0
+      padding 3px
+    .post-category-list-link
+      color $colorDarkGray
+  .post-body
+    h2
+    h3
+    h4
+    h5
+    h6
+      margin 30px 0 15px
+    ul
+      list-style square
 
-.comments
-  margin-top 30px
+    blockquote
+      margin 10px 0
+      padding 0 15px
+      color $colorDimGray
+      border-left 2px solid $colorLightGray
+    code
+      font-size 13px
+    .post-type-link
+      margin: 20px 0
+      padding 15px
+      color $postTypeLinkColor
+      background $postTypeLinkBackgroundColor
+      border 1px solid $postTypeLinkBorderColor
+  .post-footer
+    .post-tags
+      margin-top 20px
+
+      .post-tags-label
+        display inline-block
+        margin-right 10px
+        padding 0 5px
+        background $baseLinkColor
+        color white
+        cursor help
+      a
+        display inline-block
+        margin-right 10px
+  .post-eof
+    margin 60px auto 20px
+    width 50%
+    height 1px
+    background $colorLightGray
+    text-align center
+    &::before, &::after
+      position relative
+      top -11px
+      content ' '
+      display inline-block
+      width 0
+      height 0
+      border-width 8px
+      border-style solid
+    &::before
+      border-color white $colorLightGray white white
+    &::after
+      border-color white white white $colorLightGray
+
+
+
+  .page-archives &
+    margin-left 20px
+    margin-bottom 50px
+    padding-top 0
+    padding-bottom 5px
+    border-bottom 1px dotted $colorLightBlack
+    .post-meta
+      float right
+    .post-title
+      margin-bottom 0
+      a
+        border none
+
+.page-archives & .archives-date
+  margin 40px 0
+  color $colorDarkGray
+
+
+
+.pagination
+  overflow hidden
+  margin 20px -20px -30px
+  padding 20px 0
+  background $paginationBackgroundColor if hexo-config('use_background')
+  font-family $fontFamilySans
+  a
+    display inline-block
+    background $paginationLinkBackgroundColor
+    color white
+    text-decoration none
+    padding 2px 20px
+    border-radius 2px
+    &:hover
+      background $paginationLinkHoverBackgroundColor
+    &.pagination-prev
+      float left
+    &.pagination-next
+      float right
+
+
+
+
+.footer
+  font-family $fontFamilySans
+  font-size 14px
+  .footer-wrap
+    overflow hidden
+    .copyright
+      .author
+        text-transform uppercase

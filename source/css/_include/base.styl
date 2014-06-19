@@ -1,33 +1,35 @@
 body
-    color $baseTextColor
-    background $bodyBackgroundColor
-    font $fontSizeBase/$fontLineHeightBase $fontFamilyBase
+  color $baseTextColor
+  background $bodyBackgroundColor
+  font $fontSizeBase/$fontLineHeightBase $fontFamilyBase
 
 h1, h2, h3, h4, h5, h6
-    margin 0
-    padding 0
-    font-weight bold
-    line-height 1
+  margin 0
+  padding 0
+  font-weight bold
+  line-height 1
 
 for headline in (1..6)
-    h{headline}
-        font-size $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline
+  h{headline}
+    font-size $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline
 
 a
-    color: $baseLinkColor
-    &:hover
-        text-decoration underline
+  color $baseLinkColor
+  text-decoration none
+
+  &:hover
+    color $baseLinkHoverColor
 
 p
-    margin 10px 0;
+  margin 10px 0;
 
 ul
-    list-style: none
+  list-style: none
 
 ::selection
-    background $colorDeepBlue
-    color: white
+  background $colorDeepBlue
+  color: white
 
 blockquote
-    margin 0
-    padding 0
+  margin 0
+  padding 0

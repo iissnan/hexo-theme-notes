@@ -6,6 +6,8 @@ sidebar: false
 
 use_background: true
 
+theme_schema: silence
+
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date

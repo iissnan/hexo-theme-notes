@@ -35,9 +35,8 @@ mixin renderPost(post, pageType, last)
         div.post-footer
             if post.tags && post.tags.length
                 div.post-tags
-                    | tags: &nbsp;
                     -post.tags.each(function(tag){
-                    a(href=url_for(tag.path))= tag.name
+                        a(href=url_for(tag.path))= "#" + tag.name
                     -})
             if !post.isLast && post.pageType !== "post" && post.pageType !== "page"
                 div.post-eof
