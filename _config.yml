@@ -2,10 +2,21 @@ menu:
   home: /
   archives: /archives
 
-sidebar: false
+favicon: /favicon.ico
 
-use_background: true
+# Specify icon form apple devices
+touch_icons:
+  57x57: /images/apple-touch-icon-precomposed.png
+  114x114: /images/apple-touch-icon-114x114-precomposed.png
+  72x72: /images/apple-touch-icon-72x72-precomposed.png
+  144x144: /images/apple-touch-icon-144x144-precomposed.png
 
+# Specify a background image for content area
+background_image: /images/gplaypattern.png
+
+# Theme color schema
+## Default: mild
+## Available: mild | silence
 theme_schema: silence
 
 
@@ -21,3 +32,6 @@ time_format: H:mm:ss
 ## Available value: normal | night | night eighties | night blue | night bright
 ## https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night eighties
+
+# Specify the date when the site was setup
+since: 2013

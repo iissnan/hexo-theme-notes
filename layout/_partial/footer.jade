@@ -1,5 +1,9 @@
 div.copyright
-    != "&copy; " + date(Date.now(), "YYYY") + " "
+    | &copy; &nbsp;
+    if theme.since
+        = theme.since + " - "
+    = date(Date.now(), "YYYY")
+    | &nbsp;
     | &hearts; &nbsp;
     span.author
         =config.author

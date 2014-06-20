@@ -64,7 +64,7 @@
 
 
 .main
-  background url($mainBackgroundImage) repeat if hexo-config('use_background')
+  background url($mainBackgroundImage) repeat if $mainBackgroundImage
   .main-wrap
     .content
       background $contentBackgroundColor
@@ -181,7 +181,7 @@
   overflow hidden
   margin 20px -20px -30px
   padding 20px 0
-  background $paginationBackgroundColor if hexo-config('use_background')
+  background $paginationBackgroundColor if $mainBackgroundImage
   font-family $fontFamilySans
   a
     display inline-block
@@ -197,6 +197,8 @@
     &.pagination-next
       float right
 
+.comments
+  margin-top 30px
 
 
 
