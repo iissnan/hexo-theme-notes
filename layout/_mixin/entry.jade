@@ -24,7 +24,7 @@ mixin renderPost(post, pageType, last)
                         a(href=post.link_to, target="_blank") Visit the link Now &raquo;
 
 
-            if post.excerpt && pageType == "index"
+            if post.excerpt && post.pageType == "index"
                 != post.excerpt
                 div.post-more-link
                     a(href=articleLink) Read more

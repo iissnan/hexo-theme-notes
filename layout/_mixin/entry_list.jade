@@ -11,6 +11,6 @@ mixin renderPostList(post)
             h2.post-title
                 if post.pageType !== "post"
                     a.post-title-link(href=articleLink)
-                        = post.title
+                        = post.title || "Untitled"
                 else
-                    =post.title
+                    =post.title || "Untitled"
