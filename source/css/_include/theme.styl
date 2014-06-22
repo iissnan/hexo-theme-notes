@@ -114,6 +114,30 @@
       padding 0 15px
       color $colorDimGray
       border-left 2px solid $colorLightGray
+      & cite
+        &::before
+          content "-"
+          padding 0 5px
+    table
+      width 100%
+      border-collapse collapse
+      border-spacing 0
+    caption, th, td
+      text-align left
+      vertical-align middle
+      font-weight normal
+    th
+      font-weight 700
+      border-bottom 3px solid $colorLighterGray
+      padding-bottom 10px
+    td
+      border-bottom 1px solid $colorLighterGray
+      padding 10px 0
+    dt
+      font-weight 700
+    dd
+      margin 0
+      padding 0
     code
       font-size 13px
     img
@@ -125,6 +149,16 @@
       color $postTypeLinkColor
       background $postTypeLinkBackgroundColor
       border 1px solid $postTypeLinkBorderColor
+    .pullquote
+      width 45%
+      &.left
+        float left
+        margin-left 5px
+        margin-right 10px
+      &.right
+        float right
+        margin-left 10px
+        margin-right 5px
   .post-footer
     .post-tags
       margin-top 20px
