@@ -55,15 +55,15 @@ $line-numbers
       text-align: right
       padding-right: 20px
   .gist
-    margin: 0 $articlePadding * -1
+    margin: 20px 0 //0 $articlePadding * -1
     border-style: solid
     border-color: $baseBorderColor
     border-width: 1px 0
     background: highlight-background
-    padding: 15px $articlePadding 15px 0
+    padding: 15px $articlePadding 15px 15px
     .gist-file
       border: none
-      font-family: font-mono
+      font-family: $fontFamilyMono
       margin: 0
       .gist-data
         background: none
@@ -82,7 +82,7 @@ $line-numbers
       .gist-meta
         background: highlight-background
         color: highlight-comment
-        font: 0.85em font-sans
+        font: 13px $fontFamilySans
         text-shadow: 0 0
         padding: 0
         margin-top: 1em
