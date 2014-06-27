@@ -12,6 +12,7 @@ div.theme-info
     | Theme - &nbsp;
     a.theme-link(href="https://github.com/iissnan/hexo-theme-notes")
         | Notes
+        span.theme-version= " (v" + theme.version + ")"
 
 if config.disqus_shortname
     - var disqus_type = page.comments ? 'embed' : 'count'

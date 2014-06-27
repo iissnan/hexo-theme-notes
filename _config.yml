@@ -35,3 +35,5 @@ highlight_theme: night eighties
 
 # Specify the date when the site was setup
 since: 2013
+
+version: 1.0
