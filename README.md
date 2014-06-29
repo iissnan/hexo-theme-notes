@@ -75,3 +75,14 @@ since: 2013
 
 version: 1.0
 ```
+
+## Development
+
+### Requirements
+
+- Hexo 2.4+
+
+### Dependencies
+
+- hexo-renderer-jade
+- hexo-renderer-stylus
