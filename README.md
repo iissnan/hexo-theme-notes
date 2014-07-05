@@ -5,6 +5,8 @@ A clean responsive theme for [Hexo](http://zespia.tw/hexo/).
 
 - [Preview](http://notes.iissnan.com/)
 
+![Preview](source/images/preview.png?raw=true)
+
 ## Installation
 
 ### Install
