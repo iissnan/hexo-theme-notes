@@ -1,0 +1,30 @@
+{
+  "name": "Hexo theme - Notes",
+  "version": "1.0.0",
+  "homepage": "https://github.com/iissnan/hexo-theme-notes",
+  "authors": [
+    "iissnan <iissnan@gmail.com>"
+  ],
+  "description": "A Clean and Lightweight theme for Hexo",
+  "keywords": [
+    "hexo",
+    "notes",
+    "hexo",
+    "theme",
+    "iissnan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.*",
+    "nprogress": "*",
+    "jquery-pjax": "~1.9.2"
+  }
+}
