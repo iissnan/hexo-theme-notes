@@ -41,4 +41,29 @@ html(class=page_class)
             $(document)
               .pjax('a', '#main', {fragment: '#main'})
               .on('pjax:start', function () { NProgress.start() })
-              .on('pjax:end', function () { NProgress.done() });
+              .on('pjax:end', function () { NProgress.done(); disqus() });
+
+            function disqus() {
+                var $disqusEl = $('#disqus_thread');
+                if ($disqusEl.size() > 0) {
+                    var disqusShortname = $disqusEl.data('shortname');
+
+                    if (!disqusShortname) {
+                        return;
+                    }
+
+                    typeof DISQUS === 'undefined' ?
+                        $.getScript('//' + disqusShortname + '.disquscdn.com/embed.js', resetDisqus) :
+                        resetDisqus();
+
+                    function resetDisqus() {
+                        DISQUS.reset({
+                          reload: true,
+                          config: function () {
+                            this.page.identifier = window.location.pathname;
+                            this.page.url = window.location.toString();
+                          }
+                        });
+                    }
+                }
+            }
