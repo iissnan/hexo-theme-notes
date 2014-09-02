@@ -1,40 +1,43 @@
 # Notes
 
+[![bower-image]][bower-url]
+[![hexo-image]][hexo-url]
 
-A clean responsive theme for [Hexo](http://zespia.tw/hexo/).
+A really clean and lightweight responsive theme for [Hexo](http://hexo.io). [Preview](http://notes.iissnan.com/).
 
-- [Preview](http://notes.iissnan.com/)
+## Screenshot
 
 ![Preview](source/images/preview.png?raw=true)
 
 ## Installation
 
-### Install
+1. Download this theme into your hexo site's theme directory:
 
-```
-cd path-to-hexo 
-git clone https://github.com/iissnan/hexo-theme-notes themes/notes
-```
+    ```
+    cd path-to-hexo
+    git clone https://github.com/iissnan/hexo-theme-notes themes/notes
+    ```
+2. Set theme to `notes` in the your hexo site's `_config.yml`. Open `_config.yml`(locates in `path-to-hexo/_config.yml`),
+and set `theme` to `notes`. The settings may look like:
 
-### Enable
+    ```
+    theme:
+        #landscape
+        notes
+    ```
+3. Enjoy.
 
-Open `_config.yml` (locates in `path-to-hexo/_config.yml`), and set `theme` to `notes`.
-The settings may look like:
 
-```
-theme:
-    #landscape
-    notes
-```
+## Update theme
 
-### Update
+When there are updates of this theme, you can run the following command to update:
 
 ```
 cd themes/notes
 git pull
 ```
 
-### Configuration
+## Configuration
 
 ```
 menu:
@@ -80,11 +83,13 @@ version: 1.0
 
 ## Development
 
-### Requirements
+## Requirements
 
 - Hexo 2.4+
-
-### Dependencies
-
 - hexo-renderer-jade
 - hexo-renderer-stylus
+
+[hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
+[hexo-url]: http://hexo.io
+[bower-image]: http://img.shields.io/badge/Bower-Powered-2BAF2B.svg?style=flat-square
+[bower-url]: http://bower.io
