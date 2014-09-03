@@ -21,8 +21,11 @@ html(class=page_class)
             div#main.main
                 .main-wrap
                     div#content.content
-                        div.content-wrap
-                            block content
+                        div.posts-list-wrap
+                            div#post-list.posts-list
+                                block content
+
+                        block pagination
 
                     if theme.sidebar
                         include _partial/sidebar

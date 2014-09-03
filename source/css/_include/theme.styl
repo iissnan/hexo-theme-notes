@@ -57,18 +57,13 @@
         &:hover
           background $menuItemHoverBackgroundColor
 
-    .page-home & .menu-item-home a,
-    .page-archives & .menu-item-archives a,
-    .page-about & .menu-item-about a
-      background $menuItemHoverBackgroundColor
-
-
 .main
   background url($mainBackgroundImage) repeat if $mainBackgroundImage
   .main-wrap
     .content
-      background $contentBackgroundColor
-      .content-wrap
+      .posts-list-wrap
+        background $contentBackgroundColor
+      .posts-list
         padding-bottom 30px
     .sidebar
       background $contentBackgroundColor
@@ -231,9 +226,7 @@
 
 .pagination
   overflow hidden
-  margin 20px -20px -30px
-  padding 20px 0
-  background $paginationBackgroundColor if $mainBackgroundImage
+  margin 20px 0
   font-family $fontFamilySans
   a
     display inline-block
