@@ -40,6 +40,7 @@ html(class=page_class)
         script(src="/vendors/jquery/dist/jquery.min.js")
         script(src="/vendors/jquery-pjax/jquery.pjax.js")
         script(src="/vendors/nprogress/nprogress.js")
+        script(src="http://#{config.disqus_shortname}.disqus.com/embed.js")
         script.
             $(document)
               .pjax('a', '#main', {fragment: '#main'})
@@ -49,24 +50,12 @@ html(class=page_class)
             function disqus() {
                 var $disqusEl = $('#disqus_thread');
                 if ($disqusEl.size() > 0) {
-                    var disqusShortname = $disqusEl.data('shortname');
-
-                    if (!disqusShortname) {
-                        return;
-                    }
-
-                    typeof DISQUS === 'undefined' ?
-                        $.getScript('//' + disqusShortname + '.disquscdn.com/embed.js', resetDisqus) :
-                        resetDisqus();
-
-                    function resetDisqus() {
-                        DISQUS.reset({
-                          reload: true,
-                          config: function () {
-                            this.page.identifier = window.location.pathname;
-                            this.page.url = window.location.toString();
-                          }
-                        });
-                    }
+                    DISQUS.reset({
+                      reload: true,
+                      config: function () {
+                        this.page.identifier = window.location.pathname;
+                        this.page.url = window.location.toString();
+                      }
+                    });
                 }
             }
